@@ -89,4 +89,17 @@ function start_play_slideshow() {
     setTimeout('play_slideshow()', slidetime);
 }
 
+jQuery(document).ready(function(){
+	jQuery('.filter a').live('click',function(){
+		if(jQuery(this).attr('class') == 'btn-img-expand'){
+			jQuery(this).removeClass('btn-img-expand');
+			jQuery(this).addClass('btn-img-collapse');
+			jQuery(this).next().removeClass('hide').addClass('show');
+		} else {
+			jQuery(this).removeClass('btn-img-collapse');
+			jQuery(this).addClass('btn-img-expand');
+			jQuery(this).next().removeClass('show').addClass('hide');
+		}
+	});
+});
 
