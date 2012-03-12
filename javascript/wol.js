@@ -90,7 +90,7 @@ function start_play_slideshow() {
 }
 
 jQuery(document).ready(function(){
-	jQuery('.filter a').live('click',function(){
+	jQuery('.btn-img-collapse,.btn-img-expand').live('click',function(){
 		if(jQuery(this).attr('class') == 'btn-img-expand'){
 			jQuery(this).removeClass('btn-img-expand');
 			jQuery(this).addClass('btn-img-collapse');
@@ -99,6 +99,32 @@ jQuery(document).ready(function(){
 			jQuery(this).removeClass('btn-img-collapse');
 			jQuery(this).addClass('btn-img-expand');
 			jQuery(this).next().removeClass('show').addClass('hide');
+		}
+	});
+	
+	jQuery('.thumbnail a').live('click',function(){
+		jQuery('.image-preview img').attr('src',jQuery(this).attr('rel'));
+	});
+	jQuery('.image-preview a').live('click',function(){
+		if(jQuery(this).attr('class') == 'btn-next'){
+			var rel = jQuery('.thumbnail a');
+			var src = jQuery('.image-preview img').attr('src');
+			jQuery.each(rel,function(i,val){
+				if(jQuery(this).attr('rel') == src && i != (rel.length-1)) {
+					jQuery('.image-preview img').attr('src',jQuery(rel[i+1]).attr('rel'));
+				} else if (jQuery(this).attr('rel') == src && i == (rel.length-1)){
+					jQuery('.image-preview img').attr('src',jQuery(rel[0]).attr('rel'));
+				}
+			});
+		} else if(jQuery(this).attr('class') == 'btn-prev'){
+			var rel = jQuery('.thumbnail a');
+			var rel_l = rel.length;
+			var src = jQuery('.image-preview img').attr('src');
+			jQuery.each(rel,function(i,val){
+				if(jQuery(this).attr('rel') == src) {
+					jQuery('.image-preview img').attr('src',jQuery(rel[i-1]).attr('rel'));
+				}
+			});
 		}
 	});
 });
