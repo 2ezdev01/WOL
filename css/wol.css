@@ -59,26 +59,11 @@ button:hover {cursor: pointer;}
 #footer label {font-size: 9px;color: #808181;}
 #footer input {font-size: 9px;height: 10px;border: 0px;margin-top: -2px;width: 100px;}
 #footer button {font-size: 8px;background-color:#808181; color: #000;border: 0px;padding: 1px 2px;margin-top: -2px; }
-/* slideshow */
-.slideshow { position:relative;}
-.nav_slide { position:absolute; bottom:20px; right:20px; }
-.nav_slide li { float:left;line-height:16px; text-align:center; background:#000;margin-left: 5px; }
-.nav_slide li:hover, .nav_slide li.current { background:#dbcb00; }
-.nav_slide li a { display:block; width:15px; height:15px; color:#fff; text-decoration:none;padding: 2px; }
-.nav_slide li a.toogle { text-indent:-9999em; background-position:50% 50%; background-repeat:no-repeat; }
-.nav_slide li a.play { background-image:url(../images/nav_slide_play.png); }
-.nav_slide li a.stop { background-image:url(../images/nav_slide_stop.png); }
 /* homepage */
-#homepage .slideshow,#homepage .top-image {margin-bottom: 15px;}
-#homepage .catalog {float:left;margin-right: 13px;font-size: 9px;}
-#homepage .catalog p {margin-top: 5px;}
-#homepage .right-catalog .catalog-2 {margin-right: 0;}
-.left-catalog .catalog-1 {width: 148px;}
-.left-catalog .catalog-2 {width: 314px;}
-.left-catalog .catalog-3 {width: 148px;}
-.right-catalog .catalog-1 {width: 144px;}
-.right-catalog .catalog-2 {width: 148px;}
-#homepage h5 {margin-bottom: 5px;}
+#homepage {margin: -25px -25px -25px -25px;background: #000;}
+#homepage .fadein {margin-bottom: 5px;}
+#homepage .bottom-menu a {padding-left: 3px;}
+#homepage .bottom-menu a:first-child {padding-left: 0;}
 /* Product browse*/
 #product-browse > h2 {margin-bottom: 5px;}
 #product-browse .cat-filter {width: 170px;float:left;}

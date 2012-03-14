@@ -8,6 +8,9 @@
     	<link rel="stylesheet" type="text/css" href="css/styles-ie.css" />
     	<link rel="stylesheet" type="text/css" href="css/wol-ie.css" />
     <![endif]-->
+    <!--[if IE 7]>
+    	<link rel="stylesheet" type="text/css" href="css/wol-ie-7.css" />
+    <![endif]-->
     <link rel="stylesheet" type="text/css" href="css/print.css" media="print"/>
 	<link rel="stylesheet" type="text/css" href="css/wol.css" media="all"/>
 	<script type="text/javascript" src="javascript/jquery.tools.min.js"></script>
@@ -20,27 +23,73 @@
 		<div class="page">
 			<div class="header-container">
 				<div class="top-header">
-					<div class="logo-company"><img src="images/logo.png" alt="logo work out life"/></div>
-					<div class="link-top-header">
-						<div class="link-user">
-							<a href="#">LOGIN</a> OR <a href="#">REGISTER</a> | <a href="#">WISH LIST(4)</a>
-						</div>
-						<div class="link-cart">
-							<span>$ 150.00</span> <a href="#">SHOPPING CART(2)</a>
-						</div>
-					</div>
+					<a href="javascript:void(0)" class="icon-account">MY ACCOUNT</a>
+					<a href="javascript:void(0)" class="icon-fav">FAVOURITES</a>
+					<a href="javascript:void(0)" class="icon-shop">SHOPPING BAG(6)</a>
+					<a href="javascript:void(0)" class="icon-lang">/AUS</a>
 				</div>
+				<div class="clear"></div>
 				<div class="bottom-header">
-					<div class="left main-menu">
-						<a href="#">WORK</a> | 
-						<a href="#">OUT</a> | 
-						<a href="#">LIFE</a> | 
-						<a href="#">COMBO PACKS</a> | 
-						<a href="#">ALL PRODUCTS</a>
+					<div class="left logo">
+						<a href="#"><img src="images/logo.png" alt="logo" title="logo"/></a>
 					</div>
-					<div class="right search relative">
-						<input type="text" value="SEARCH"/>
-						<span class="icon-search">&nbsp;</span>
+					<div class="right main-menu">
+						<ul>
+							<li><a href="#">NEW</a></li>
+							<li>
+								<a href="#">SHOP</a>
+								<div class="menu-hover">
+									<div class="menu-box">
+										<div class="column">
+											<h5>COLLECTION</h5>
+											<ul>
+												<li><a href="#">WORK</a></li>
+												<li><a href="#">OUT</a></li>
+												<li><a href="#">LIFE</a></li>
+											</ul>
+										</div>
+										<div class="column">
+											<h5>CATEGORY</h5>
+											<ul>
+												<li><a href="#">ALL CLOTHING</a></li>
+												<li><a href="#">TOPS</a></li>
+												<li><a href="#">HOODIES</a></li>
+												<li><a href="#">LEGGINGS</a></li>
+												<li><a href="#">PANTS</a></li>
+												<li><a href="#">SHORTS</a></li>
+												<li><a href="#">SHIRTS</a></li>
+												<li><a href="#">BODYSUITS</a></li>
+											</ul>
+										</div>
+										<div class="column">
+											<h5>NEW</h5>
+											<ul>
+												<li><a href="#">NEW THIS SEASON</a></li>
+												<li><a href="#">NEW ARRIVALS</a></li>
+												<li><a href="#">STAFF PICKS</a></li>
+												<li><a href="#">EXCLUSIVES</a></li>
+												<li><a href="#">VIEW ALL</a></li>
+											</ul>
+										</div>
+										<div class="column">
+											<h5>PACKS</h5>
+											<ul>
+												<li><a href="#">VIEW ALL</a></li>
+												<li><a href="#">WORK PACK</a></li>
+												<li><a href="#">OUT PACK</a></li>
+												<li><a href="#">LIFE PACK</a></li>
+												<li><a href="#">FUSION PACK</a></li>
+											</ul>
+										</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</li>
+							<li><a href="#">LOOKBOOK</a></li>
+							<li><a href="#">PACKS</a></li>
+							<li><a href="#">ABOUT</a></li>
+							<li><a href="#">CLUB</a></li>
+						</ul>
 					</div>
 					<div class="clear"></div>
 				</div>
@@ -50,39 +99,17 @@
 					<div class="std">
 						<div class="content">
 							<div id="homepage">
-								<div class="slideshow">
-									<a href="#"><img src="images/slideshow_1.jpg" id="slide_preview" alt="" /></a> 
-									<ul class="nav_slide">
-										<li class="current"><a href="#" filename="images/slideshow_1.jpg">1</a></li>
-										<li><a href="#" filename="images/slideshow_2.jpg">2</a></li>
-										<li><a href="#" filename="images/slideshow_3.jpg">3</a></li>
-									</ul>
+								<div class="fadein">
+									<img src="images/slideshow_1.jpg" alt="" />
+									<img src="images/slideshow_2.jpg" alt="" />
+									<img src="images/slideshow_3.jpg" alt="" />
+									<img src="images/slideshow_4.jpg" alt="" />
+									<img src="images/slideshow_5.jpg" alt="" />
 								</div>
-								<div class="left-catalog left">
-									<h5>MODERN LIVING</h5>
-									<div class="catalog catalog-1">
-										<img src="images/catalog-1.png" alt=""/>
-										<p>W.O.L Ambassador Julian James embraces us from Sydney.</p>
-									</div>
-									<div class="catalog catalog-2">
-										<img src="images/catalog-2.png" alt=""/>
-										<p>The WORK OUT LIFE guide to stretching your body and mind.</p>
-									</div>
-									<div class="catalog catalog-3">
-										<img src="images/catalog-3.png" alt=""/>
-										<p>The WORK OUT LIFE guide to children.</p>
-									</div>
-								</div>
-								<div class="right-catalog right">
-									<h5>WOL LATEST</h5>
-									<div class="catalog catalog-1">
-										<img src="images/catalog-4.png" alt=""/>
-										<p>The WORK OUT LIFE guide to stretching your body and mind.</p>
-									</div>
-									<div class="catalog catalog-2">
-										<img src="images/catalog-5.png" alt=""/>
-										<p>The WORK OUT LIFE guide to stretching your body and mind.</p>
-									</div>
+								<div class="bottom-menu">
+									<a href="#"><img src="images/bot-about.jpg"/></a>
+									<a href="#"><img src="images/bot-pack.jpg"/></a>
+									<a href="#"><img src="images/bot-video.jpg"/></a>
 								</div>
 								<div class="clear"></div>
 							</div>
@@ -92,48 +119,62 @@
 			</div>
 			<div class="footer-container">
 				<div id="footer">
-					<div class="left">
-						<div class="footer-link">
-							<h5>CUSTOMER SUPPORT</h5>
-							<ul>
-								<li><a href="#">Returns & Changes</a></li>
-								<li><a href="#">Shippping Options</a></li>
-								<li><a href="#">Payment Methods</a></li>
-								<li><a href="#">Size Chart</a></li>
-								<li><a href="#">Unsubscribe</a></li>
-								<li><a href="#">Sitemap</a></li>
-								<li><a href="#">Contact Us</a></li>
-							</ul>
+					<div class="footer-link">
+						<div class="footer-box">
+						<h5>CUSTOMER SERVICE</h5>
+						<ul>
+							<li><a href="#">HELP AND CONTACT</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">DELIVERY AND RETURNS</a></li>
+							<li><a href="#">TRACK ORDERS</a></li>
+						</ul>
 						</div>
-						<div class="footer-link">
-							<h5>ABOUT WORK OUT LIFE</h5>
-							<ul>
-								<li><a href="#">Corporate Awareness</a></li>
-								<li><a href="#">Employment</a></li>
-								<li><a href="#">Public Relations</a></li>
-								<li><a href="#">Affiliates</a></li>
-								<li><a href="#">Terms</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-							</ul>
-						</div>
-						<div class="footer-link">
-							<h5>COMMUNITY</h5>
-							<ul>
-								<li><a href="#">WOL Living</a></li>
-								<li><a href="#">Twitter</a></li>
-								<li><a href="#">Facebook</a></li>
-								<li><a href="#">Youtube</a></li>
-							</ul>
-						</div>
-						<div class="clear"></div>
 					</div>
-					<div class="right">
-						<input type="text" value="Newsletter Signup"/><input type="submit" value="submit"/>
+					<div class="footer-link">
+						<div class="footer-box">
+						<h5>EDUCATION</h5>
+						<ul>
+							<li><a href="#">YOGA TIPS</a></li>
+							<li><a href="#">SIZE CHARTS</a></li>
+							<li><a href="#">PRODUCT CARE</a></li>
+							<li><a href="#">FABRICS</a></li>
+						</ul>
+						</div>
+					</div>
+					<div class="footer-link">
+						<div class="footer-box">
+						<h5>COMMUNITY</h5>
+						<ul>
+							<li><a href="#">CITY GUIDES</a></li>
+							<li><a href="#">AMBASSADORS</a></li>
+						</ul>
+						</div>
+					</div>
+					<div class="footer-link">
+						<div class="footer-box">
+						<h5>CONNECT</h5>
+						<ul class="connect">
+							<li><a href="#" class="icon-facebook">FACEBOOK</a></li>
+							<li><a href="#" class="icon-twitter">TWITTER</a></li>
+							<li><a href="#" class="icon-tumblr">TUMBLR</a></li>
+							<li><a href="#" class="icon-pin">PINTEREST</a></li>
+							<li><a href="#" class="icon-mobile">MOBILE</a></li>
+						</ul>
+						</div>
+					</div>
+					<div class="footer-link">
+						<div class="footer-box">
+						<h5>SIGN UP</h5>
+						<form action="#">
+							<label for="email">EMAIL :</label>
+							<input id="email" type="text"/>
+							<button formaction="" id="btn-email">GO</button>
+						</form>
+						</div>
 					</div>
 					<div class="clear"></div>
-					<div class="copyright">COPYRIGHT & CREDITS</div>
 				</div>
-			</div>
+			</div>		
 		</div>
 	</div>
 </body>
