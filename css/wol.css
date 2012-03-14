@@ -46,14 +46,15 @@ button:hover {cursor: pointer;}
 #footer h5 {color: #808181;font-size: 10px;font-weight: normal;margin-bottom: 15px;}
 #footer .footer-link {float:left;width:20%;}
 #footer .footer-box {border-top: 1px solid #808181;margin: 0px 10px;padding-top: 20px;}
-#footer .footer-link a {color: #808181;font-size: 9px;padding: 4px 0 4px 0;}
+#footer .footer-link a {color: #808181;font-size: 9px;padding: 4px 0 4px 0;display:block;height:6px;}
 #footer .footer-link a:hover {color:#01ffff;text-decoration: none;}
 .icon-facebook, .icon-twitter, .icon-tumblr, .icon-pin, .icon-mobile {background-image: url(../images/icon-social.png);background-repeat: no-repeat;}
 .icon-facebook {background-position: 0 2px;}
 .icon-twitter {background-position: 0 -15px;}
 .icon-tumblr {background-position: 0 -32px;}
 .icon-pin {background-position: 0 -50px;}
-.icon-mobile {background-position: 0 -66px;} 
+.icon-mobile {background-position: 0 -66px;;}
+#footer .footer-link a.icon-mobile {height:12px;}
 #footer .footer-link .connect a {padding-left: 15px;}
 #footer label {font-size: 9px;color: #808181;}
 #footer input {font-size: 9px;height: 10px;border: 0px;margin-top: -2px;width: 100px;}

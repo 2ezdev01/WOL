@@ -1,3 +1,3 @@
 /* workoutlife for internet explorer */
-.header-container .link-user, .header-container .link-cart {float:left;}
-#footer input[type="submit"]{height: 21px;}
+.bottom-header .main-menu > ul .menu-box {background-image: url(../images/bg-tranparent-ie.png);}
+.bottom-header .main-menu .menu-hover ul li a {margin-bottom:5px;display:block;height:16px;}
