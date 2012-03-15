@@ -1,6 +1,7 @@
 /* workoutlife */
 /* general */
 body {font-family:Arial, Helvetica,sans-serif;font-size:12px;color: #000;}
+button::-moz-focus-inner { padding:0; margin:0; border:0; }
 .col-main {padding: 0;border: 0;}
 .main {padding: 25px;margin: 0;}
 .page {width: 960px;padding-top: 0px;padding-bottom: 0px;}
@@ -25,22 +26,26 @@ button:hover {cursor: pointer;}
 .btn-green:hover {text-decoration: none;}
 .btn-black span {font-size: 12px;}
 /* header */
-.header-container {height: 90px;background-color: #000;}
-.header-container .top-header {float: right;padding: 8px 25px;font-size: 9px;}
+.header-container {height: 84px; border-bottom:1px dotted #000;}
+.header-container .top-header {padding: 8px 25px;font-size: 9px; text-align:right; background:#000;}
 .top-header .icon-account,.top-header .icon-fav, .top-header .icon-shop,.top-header .icon-lang {padding-left: 15px;margin-left:20px;background-repeat: no-repeat;background-position: 0 0;}
 .top-header .icon-account {background-image: url(../images/icon-account.png);}
 .top-header .icon-fav {background-image: url(../images/icon-fav.png);}
-.top-header .icon-shop {background-image: url(../images/icon-shop.png);}
+.top-header .icon-shop {background: url(../images/icon-shop.png) no-repeat;}
+.top-header [class^=icon-]:hover {background-position:0 100%;}
 .top-header .icon-lang {background-image: url(../images/icon-lang.png);padding-left: 23px;background-position: 1px center;}
 .top-header a {color: #fff;}
 .top-header a:hover {color: #01ffff;text-decoration: none;}
-.bottom-header {background-color: #333;height: 36px;padding: 10px 25px;}
-.bottom-header .main-menu > ul > li {float: left;position: relative;margin-left: 55px;}
-.bottom-header .main-menu > ul .menu-hover {display: none;position: absolute;top: 28px;left:-145px;width: 545px;padding-top: 24px;background-image: url(../images/arrow-menu-hover.png);background-repeat: no-repeat;background-position: 155px 8px;z-index: 999999;}
-.bottom-header .main-menu > ul .menu-box {background-color: rgba(40,40,40,0.95);padding: 20px 50px;}
-.bottom-header .main-menu > ul > li a:hover {color:#01ffff ;text-decoration: none;}
-.bottom-header .main-menu > ul > li a {padding: 5px 0 5px 5px;color: #fff;display: inline-block;margin-top: 5px;font-style: normal;font-size: 11px;}
-.bottom-header .main-menu .menu-hover ul li a {padding: 0;margin: 0;}
+/* home header */
+.cms-home .header-container{height:90px; border-bottom:0; background:#000;}
+.bottom-header {background-color: #fff;height: 36px;padding: 10px 25px;}
+.bottom-header .main-menu > ul > li {float: left;position: relative;margin-left: 20px;}
+.bottom-header .main-menu > ul .menu-hover {display: none;position: absolute;top: 22px;left:-145px;width: 545px;padding-top: 24px;background: url(../images/arrow-menu-hover.png)155px 14px no-repeat;z-index: 999999;}
+.bottom-header .main-menu > ul .menu-box {background-color: rgba(0,0,0,0.80);padding: 20px 50px;}
+.bottom-header .main-menu > ul > li a {padding: 5px 18px;color: #000;display: inline-block;margin-top: 5px;font-style: normal;font-size: 11px;}
+.bottom-header .main-menu > ul > li a:hover, .bottom-header .main-menu > ul > li a.focus {color:#fff ;text-decoration: none; background:#000;}
+.bottom-header .main-menu .menu-hover ul li a {padding: 0;margin: 0; color: #fff;}
+.bottom-header .main-menu .menu-hover ul li a:hover {color: #01ffff; background:none;}
 .bottom-header .main-menu > ul > li:hover .menu-hover {display: block;}
 .menu-hover .column {float: left;margin-left: 50px;}
 .menu-hover .column:first-child {margin-left: 0;}
@@ -51,18 +56,18 @@ button:hover {cursor: pointer;}
 #footer h5 {color: #808181;font-size: 10px;font-weight: normal;margin-bottom: 15px;}
 #footer .footer-link {float:left;width:20%;}
 #footer .footer-box {border-top: 1px solid #808181;margin: 0px 10px;padding-top: 20px;}
-#footer .footer-link a {color: #808181;font-size: 9px;padding: 4px 0 4px 0;display:block;height:6px;}
+#footer .footer-link a {color: #808181;font-size: 9px;padding: 4px 0 4px 0;display:block; line-height:1}
 #footer .footer-link a:hover {color:#01ffff;text-decoration: none;}
 .icon-facebook, .icon-twitter, .icon-tumblr, .icon-pin, .icon-mobile {background-image: url(../images/icon-social.png);background-repeat: no-repeat;}
 .icon-facebook {background-position: 0 2px;}
 .icon-twitter {background-position: 0 -15px;}
 .icon-tumblr {background-position: 0 -32px;}
 .icon-pin {background-position: 0 -50px;}
-.icon-mobile {background-position: 0 -66px;;}
+.icon-mobile {background-position: 0 -66px;}
 #footer .footer-link a.icon-mobile {height:12px;}
 #footer .footer-link .connect a {padding-left: 15px;}
 #footer label {font-size: 9px;color: #808181;}
-#footer input {font-size: 9px;height: 10px;border: 0px;margin-top: -2px;width: 100px;}
+#footer input {font-size: 9px;height: 11px;border: 0px;margin-top: -1px;width: 100px;}
 #footer button {font-size: 8px;background-color:#808181; color: #000;border: 0px;padding: 1px 2px;margin-top: -2px; }
 /*breadcrumb*/
 .breadcrumbs {border: 0;padding: 0;margin: 0 0 8px 0;font-size: 11px;}
@@ -71,24 +76,25 @@ button:hover {cursor: pointer;}
 .breadcrumbs a:hover {text-decoration: none;color: #000;}
 /* homepage */
 #homepage {margin: -25px -25px -25px -25px;background: #000;}
-#homepage .fadein {margin-bottom: 5px;}
+#homepage .fadein {position:relative; height:482px; margin-bottom: 5px;}
+#homepage .fadein img {position:absolute; top:0; left:0;}
 #homepage .bottom-menu a {padding-left: 3px;}
 #homepage .bottom-menu a:first-child {padding-left: 0;}
-/* Product browse*/
-#product-browse > h2 {margin-bottom: 5px;}
-#product-browse .cat-filter > h5 {margin-bottom: 15px;}
-#product-browse .collection {height: 35px;}
-#product-browse .collection li {float: left}
-#product-browse .collection li a {padding: 5px 10px;background: #000;margin-left: 11px;color: #fff;}
-#product-browse .collection li a:hover {text-decoration: none;color:#01ffff; }
-#product-browse .collection li:first-child a {margin-left: 0;}
+/* Product browse */
+h2 {margin-bottom: 5px;}
+.cat-filter > h5 {margin-bottom: 15px;}
+.collection {height: 35px;}
+.collection li {float: left}
+.collection li a {padding: 5px 10px;background: #000;margin-left: 11px;color: #fff;}
+.collection li a:hover {text-decoration: none;color:#01ffff; }
+.collection li:first-child a {margin-left: 0;}
 .cat-filter {width: 170px;float:left;}
 .cat-filter > h5, .cat-filter .filter > h5 {border-bottom: 1px dotted #3F3F3F;}
 .cat-filter > h5,.product-display .top, .cat-filter .filter > h5 {margin-bottom: 10px;padding-bottom: 10px;}
 .cat-filter .filter {position: relative;margin-bottom: 10px;padding-bottom:10px;border-bottom: 1px dotted #a6a8ab;}
 .cat-filter .filter a {text-decoration: none;display: inline-block;padding: 0px 4px;margin-bottom: 1px;}
 .cat-filter .filter a:hover,.cat-filter .filter a.current {background-color:#01ffff; }
-.cat-filter .filter ul li {color:#808181;margin-left: -4px; }
+.cat-filter .filter ul li {color:#808181;margin-left: -4px;font-size:11px;}
 .product-display {float: right;width: 724px;position: relative;}
 .product-display .bottom {color: #3F3F3F;font-size: 10px;}
 .product-display .bottom .right {width: 550px;}
@@ -161,9 +167,8 @@ button:hover {cursor: pointer;}
 .description .composition {margin-top: 15px;}
 /* product package*/
 #product-package .breadcrumbs {position: absolute;top:-20px;}
-#product-package > h2 {margin-bottom: 5px;}
 #product-package .pack-box {float: left;margin-left: 24px;position: relative;}
 #product-package .pack-box.no-margin-left {margin-left: 0px;}
 #product-package .pack-box p {display: block;position: relative;background-color: #333;color: #fff;font-size: 11px;padding: 10px;text-align: center;margin-top: -35px;margin-bottom: 20px;}
 #product-package .pack-box a {text-decoration: none;}
-#product-package .pack-box p span {display: block;width: 6px;height: 6px;position: absolute;right: 3px;bottom: 3px;background-image: url(../images/icon-selection.jpg);}
+#product-package .pack-box p span {display: block;width: 8px;height: 8px;position: absolute;right: 2px;bottom: 2px;background-image: url(../images/icon-selection.png);}
