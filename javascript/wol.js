@@ -4,8 +4,8 @@ jQuery(document).ready(function(){
 	jQuery(function(){
 	    jQuery('.fadein img:gt(0)').hide();
 	    setInterval(function(){
-	      jQuery('.fadein :first-child').hide()
-	         .next('img').fadeIn(2000)
+	      jQuery('.fadein :first-child').fadeOut(1000)
+	         .next('img').show()
 	         .end().appendTo('.fadein');}, 
 	      8000);
 	});
@@ -35,5 +35,15 @@ jQuery(document).ready(function(){
 			});
 		}
 	});
+	
+	// navigation
+	var hovnav = null;
+    jQuery('.menu-hover').hover(function(){
+        hovnav = jQuery(this).prev();
+        jQuery(hovnav).addClass('focus');
+    });
+    jQuery('.menu-hover').mouseleave(function(){
+        jQuery(hovnav).removeClass('focus');
+    });
 });
 
